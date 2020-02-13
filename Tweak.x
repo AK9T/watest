@@ -19,7 +19,7 @@
         
         [alert addAction:firstAction];
         [alert addAction:secondAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        [self :alert animated:YES completion:nil];
     });
 }
 

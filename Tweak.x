@@ -1,7 +1,7 @@
 
 #include <UIKit/UIKit.h>
 
-%hook WAConversationHeaderView
+%hook WAChatViewController
 
 - (void)groupCallButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){

@@ -1,14 +1,14 @@
 
 #include <UIKit/UIKit.h>
 
-@interface WAConversationHeaderView : NSObject {}
-- (void)groupCallButtonTapped:(id)arg1; 
+@interface WAChatViewController : UIViewController {}
+- (void)callButtonTapped:(id)arg1; 
 @end
 
 
-%hook WAConversationHeaderView
+%hook WAChatViewController
 
-- (void)groupCallButtonTapped:(id)arg1 {
+- (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){
          UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Prompt"
                                                                           message:@"Hello Akshay, are you sure you want to call this person?"

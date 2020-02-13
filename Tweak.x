@@ -17,7 +17,7 @@
                                                               style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
                                                                  return %orig();
                                                               }]; 
-        UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"two"
+        UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
                                                                    NSLog(@"You pressed button two");
                                                                }]; 

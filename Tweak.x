@@ -1,8 +1,5 @@
 
 #include <UIKit/UIKit.h>
-#import "WAAutoScrollingLabelDelegate-Protocol.h"
-#import "WANavigationBarTitleViewFillsAvailableSpace-Protocol.h"
-#import "WANavigationBarTitleViewLeftAlign-Protocol.h"
 #import "WAConversationHeaderView.h"
 
 @interface WAConversationHeaderView : UIView <WAAutoScrollingLabelDelegate, WANavigationBarTitleViewFillsAvailableSpace, WANavigationBarTitleViewLeftAlign>

@@ -1,7 +1,12 @@
 
 #include <UIKit/UIKit.h>
 
-%hook WAChatViewController
+@interface WAConversationHeaderView : NSObject {}
+- (void)groupCallButtonTapped:(id)arg1; 
+@end
+
+
+%hook WAConversationHeaderView
 
 - (void)groupCallButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -19,7 +24,7 @@
         
         [alert addAction:firstAction];
         [alert addAction:secondAction];
-        [self :alert animated:YES completion:nil];
+        [self presentViewController:alert animated:YES completion:nil];
     });
 }
 

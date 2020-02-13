@@ -1,7 +1,7 @@
 
 #include <UIKit/UIKit.h>
 
-@interface WAConversationHeaderView : UIView <WAAutoScrollingLabelDelegate, WANavigationBarTitleViewFillsAvailableSpace, WANavigationBarTitleViewLeftAlign>
+@interface WAConversationHeaderView : UIView
 @end
 %hook WAConversationHeaderView
 

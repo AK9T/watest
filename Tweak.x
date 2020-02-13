@@ -1,8 +1,6 @@
 
 #include <UIKit/UIKit.h>
 
-@interface WAConversationHeaderView : UIView
-@end
 %hook WAConversationHeaderView
 
 - (void)groupCallButtonTapped:(id)arg1 {

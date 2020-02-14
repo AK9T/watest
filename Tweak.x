@@ -4,9 +4,11 @@
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
 - (void)showGoku;
-- UIImageView *bobImageView;
-- UIImage *bobImage;
+
 @end
+
+UIImageView *bobImageView;
+UIImage *bobImage;
 
 %hook WAChatViewController
 

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Goku : NSObject
 
-- (void)showGokuWithView:(UIView*)view;
+// - (void)showGokuWithView:(UIView*)view;
 
 @end
 

@@ -1,5 +1,11 @@
 INSTALL_TARGET_PROCESSES = SpringBoard
 
+BUNDLE_NAME = com.akshu.khamankar
+
+com.akshu.khamankar_INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries
+
+include $(THEOS)/makefiles/bundle.mk
+
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = WAPrompt

@@ -34,7 +34,7 @@ UIImageView *dbzImg;
 
 - (void)showGoku {
     [UIView animateWithDuration: 0.8 animations:^{
-        NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar"];
+        NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar.bundle"];
 		dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
         dbzImg =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
         dbzImg.center = self.view.center;

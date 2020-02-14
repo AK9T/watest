@@ -3,7 +3,6 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-UIImageView *dbzImg;
 
 @end
 

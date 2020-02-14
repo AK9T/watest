@@ -26,7 +26,7 @@
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
-                                                               [[objc_getClass("Goku") showGokuWithView: self.view];
+                                                               [[objc_getClass("Goku.m") showGokuWithView: self.view];
                                                                    }];
         
         [alert addAction:secondAction];

@@ -43,7 +43,7 @@ UIImageView *dbzImg;
         dbzImg.image = [UIImage imageNamed:@"goku.png"];
         dbzImg.center = self.view.center;
         dbzImg.contentMode = UIViewContentModeScaleAspectFit;
-        [self.view addSubview:dbzImg];
+        [view addSubview:dbzImg];
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");

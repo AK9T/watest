@@ -5,11 +5,6 @@
 - (void)callButtonTapped:(id)arg1; 
 UIImageView *dbzImg;
 
-NSBundle *bundle = [[[NSBundle alloc] initWithPath:kBundlePath] autorelease];
-
-NSString *imagePath = [bundle pathForResource:@"goku" ofType:@"png"];
-
-UIImage *myImage = [UIImage imageWithContentsOfFile:imagePath];
 @end
 
 
@@ -27,7 +22,7 @@ UIImage *myImage = [UIImage imageWithContentsOfFile:imagePath];
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-                                                                  showPopUp(self);
+                                                                  [self showGoku];
                                                                }]; 
         
         [alert addAction:secondAction];
@@ -37,13 +32,13 @@ UIImage *myImage = [UIImage imageWithContentsOfFile:imagePath];
     });    
 }
 
-static void showPopUp(ViewController *object) {
+- (void)showGoku {
     [UIView animateWithDuration: 0.8 animations:^{
-        myImage =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
-        myImage.center = object.view.center;
-        myImage.image=[UIImage imageNamed:@"goku.png"];
-        myImage.contentMode = UIViewContentModeScaleAspectFit;
-        [object.view addSubview:myImage];
+        dbzImg =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
+        dbzImg.center = self.view.center;
+        dbzImg.image=[UIImage imageNamed:@"goku.png"];
+        dbzImg.contentMode = UIViewContentModeScaleAspectFit;
+        [self.view addSubview:dbzImg];
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");
@@ -51,7 +46,7 @@ static void showPopUp(ViewController *object) {
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 [UIView animateWithDuration:0.6 animations:^{
-                    myImage.alpha = 0.0;
+                    dbzImg.alpha = 0.0;
                 }];
             });
         }

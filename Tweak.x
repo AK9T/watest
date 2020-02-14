@@ -1,6 +1,5 @@
 #include <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-#import "functions.h"
+
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 

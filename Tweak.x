@@ -48,7 +48,7 @@
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 [UIView animateWithDuration:0.6 animations:^{
-                bobImageView.alpha = 0.0
+                bobImageView.alpha = 0.0;
                 }];
             });
         }

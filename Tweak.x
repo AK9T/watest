@@ -26,8 +26,8 @@
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
-                                                                
-                                                                  [self showGokuWithView: self.view];
+                                                                  NSLog(@"You pressed button two");
+                                                                 
 
                                                                    }];
         

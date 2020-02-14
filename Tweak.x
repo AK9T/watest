@@ -46,7 +46,7 @@ UIImage *bobImage;
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");
-            double delayInSeconds = 0.5;
+
 
                 [UIView animateWithDuration:0.6 animations:^{
                 bobImageView.alpha = 0.0;

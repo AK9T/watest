@@ -7,10 +7,6 @@
 
 @end
 
-@interface Goku : NSObject {}
-
-}
-
 
 %hook WAChatViewController
 

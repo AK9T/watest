@@ -1,24 +1,16 @@
 #include <UIKit/UIKit.h>
+#include "functions.h"
 
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
 - (void)viewDidLoad;
-- (void)showGoku;
-
 @end
 
 UIImageView *bobImageView;
 UIImage *bobImage;
 
 %hook WAChatViewController
-
-
-
-
-- (void)viewDidLoad {
-    [self showGoku];
-}
 
 
 - (void)callButtonTapped:(id)arg1 {

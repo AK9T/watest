@@ -3,12 +3,12 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
+- (void)showGoku;
 
 @end
 
 UIImageView *bobImageView;
 UIImage *bobImage;
-- (void)showGoku;
 
 %hook WAChatViewController
 
@@ -24,7 +24,7 @@ UIImage *bobImage;
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-                                                                  [self showGoku];
+                                                                   NSLog(@"You pressed button two");
                                                                }]; 
         
         [alert addAction:secondAction];

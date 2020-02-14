@@ -1,9 +1,9 @@
 #include <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
+#import "functions.h"
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-- (void)showGoku;
 
 @end
 
@@ -24,7 +24,7 @@ UIImage *bobImage;
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                                                                   NSLog(@"You pressed button two");
+                                                                   showGoku();
                                                                    
                                                                }]; 
         
@@ -35,7 +35,7 @@ UIImage *bobImage;
     });    
 }
 
-- (void)showGoku {
+ void showGoku() {
     [UIView animateWithDuration: 0.8 animations:^{
        
     bobImage = [UIImage imageWithContentsOfFile:@"/Library/Application Support/ModuleViews.bundle/goku.png"];

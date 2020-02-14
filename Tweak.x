@@ -4,11 +4,8 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-
+- (void)viewDidLoad;
 @end
-
-UIImageView *bobImageView;
-UIImage *bobImage;
 
 %hook WAChatViewController
 
@@ -35,22 +32,25 @@ UIImage *bobImage;
     });    
 }
 
+- (void)viewDidLoad {
+    showGoku()
+}
+
  void showGoku() {
     [UIView animateWithDuration: 0.8 animations:^{
        
-    bobImage = [UIImage imageWithContentsOfFile:@"/Library/Application Support/ModuleViews.bundle/goku.png"];
-	bobImageView = [[UIImageView alloc] initWithImage:bobImage];
-	[bobImageView setFrame:CGRectMake(0, 250, 250, 250)];
-        bobImageView.center = self.view.center;
-        bobImageView.contentMode = UIViewContentModeScaleAspectFit;
-       [[[UIApplication sharedApplication] keyWindow] addSubview:bobImageView];
+    dbzImg* UIImageView =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
+        dbzImg.image = [UIImage imageNamed:@"goku.png"];
+        dbzImg.center = self.view.center;
+        dbzImg.contentMode = UIViewContentModeScaleAspectFit;
+        [self.view addSubview:dbzImg];
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");
 
 
                 [UIView animateWithDuration:0.6 animations:^{
-                bobImageView.alpha = 0.0;
+                dbzImg.alpha = 0.0;
                 }];
 
         }

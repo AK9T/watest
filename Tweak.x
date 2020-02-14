@@ -22,7 +22,7 @@ UIImageView *dbzImg;
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-                                                                  [self showGoku]
+                                                                  [self showGoku];
                                                                }]; 
         
         [alert addAction:secondAction];

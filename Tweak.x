@@ -41,7 +41,7 @@ UIImageView *dbzImg;
        
         dbzImg =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
         dbzImg.image = [UIImage imageNamed:@"goku.png"];
-        dbzImg.center = self.view.center;
+        dbzImg.center = view.center;
         dbzImg.contentMode = UIViewContentModeScaleAspectFit;
         [view addSubview:dbzImg];
     } completion:^(BOOL finished) {

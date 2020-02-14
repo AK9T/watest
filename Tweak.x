@@ -18,12 +18,13 @@
                                                                  return %orig();
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
-                                                               style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                                                                   NSLog(@"You pressed button two");
+                                                               style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+                                                                   NSLog(@"You pressed button NO");
                                                                }]; 
         
-        [alert addAction:firstAction];
         [alert addAction:secondAction];
+        [alert addAction:firstAction];
+        
         [self presentViewController:alert animated:YES completion:nil];
     });
 }

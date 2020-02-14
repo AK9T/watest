@@ -1,13 +1,15 @@
-#include <UIKit/UIKit.h>
 
+#include <UIKit/UIKit.h>
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-- (void)viewDidLoad;
+UIImageView *dbzImg;
+
 @end
 
+
 %hook WAChatViewController
-void showGoku();
+
 
 - (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -19,9 +21,8 @@ void showGoku();
                                                                  return %orig();
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
-                                                               style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                                                                   showGoku();
-                                                                   
+                                                               style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+                                                                 
                                                                }]; 
         
         [alert addAction:secondAction];
@@ -30,32 +31,6 @@ void showGoku();
         [self presentViewController:alert animated:YES completion:nil];
     });    
 }
-
-- (void)viewDidLoad {
-    showGoku();
-}
-
- void showGoku() {
-    [UIView animateWithDuration: 0.8 animations:^{
-       
-    dbzImg* UIImageView =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
-        dbzImg.image = [UIImage imageNamed:@"goku.png"];
-        dbzImg.center = self.view.center;
-        dbzImg.contentMode = UIViewContentModeScaleAspectFit;
-        [self.view addSubview:dbzImg];
-    } completion:^(BOOL finished) {
-        if (finished ==  true) {
-            NSLog(@"go fuck yourself");
-
-
-                [UIView animateWithDuration:0.6 animations:^{
-                dbz.alpha = 0.0;
-                }];
-
-        }
-    }];
-}
-
 
 
 %end

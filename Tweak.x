@@ -6,10 +6,10 @@
 - (void)showGoku;
 @end
 
+UIImageView *dbzImg;
 
 %hook WAChatViewController
 
-UIImageView *dbzImg;
 
 - (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -34,9 +34,10 @@ UIImageView *dbzImg;
 
 - (void)showGoku {
     [UIView animateWithDuration: 0.8 animations:^{
+        NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar"];
+		dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
         dbzImg =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
         dbzImg.center = self.view.center;
-       dbzImg.image=[UIImage imageNamed:@"goku.png"];
         dbzImg.contentMode = UIViewContentModeScaleAspectFit;
         [self.view addSubview:dbzImg];
     } completion:^(BOOL finished) {

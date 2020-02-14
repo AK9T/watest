@@ -6,14 +6,10 @@
 //  Copyright © 2020 Akshay Khamankar. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import <UIKit/UIKit.h>
 
 @interface Goku : NSObject
 
-// - (void)showGokuWithView:(UIView*)view;
+- (void)showGokuWithView:(UIView*)view;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -23,8 +23,9 @@ UIImage *bobImage;
                                                                  return %orig();
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
-                                                               style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+                                                               style:UIAlertControllerStyleAlert handler:^(UIAlertAction * action) {
                                                                    NSLog(@"You pressed button two");
+                                                                   [self showGoku];
                                                                }]; 
         
         [alert addAction:secondAction];

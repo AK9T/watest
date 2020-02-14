@@ -2,6 +2,8 @@
 #include <UIKit/UIKit.h>
 #import "Goku.h"
 #import "Goku.m"
+#import <objc/runtime.h>
+
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
@@ -24,7 +26,7 @@
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
-                                                               [%c(Goku) showGokuWithView: self.view];
+                                                               [[objc_getClass("Goku") showGokuWithView: self.view];
                                                                    }];
         
         [alert addAction:secondAction];

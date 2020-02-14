@@ -6,10 +6,11 @@
 - (void)showGoku;
 @end
 
-UIImageView *dbzImg;
+
 
 %hook WAChatViewController
 
+UIImageView *dbzImg;
 
 - (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){

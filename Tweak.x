@@ -7,7 +7,7 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-
+- (void)showGokuWithView:(UIView*)view;
 @end
 
 
@@ -27,7 +27,7 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                 
-                                                                  [%c(Goku) showGokuWithView: self.view];
+                                                                  [self showGokuWithView: self.view];
 
                                                                    }];
         

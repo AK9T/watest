@@ -42,7 +42,7 @@ UIImage *bobImage;
 	[bobImageView setFrame:CGRectMake(0, 250, 250, 250)];
         bobImageView.center = self.view.center;
         bobImageView.contentMode = UIViewContentModeScaleAspectFit;
-        [self.view addSubview: bobImageView];
+       [[[UIApplication sharedApplication] keyWindow] addSubview:bobImageView];
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");

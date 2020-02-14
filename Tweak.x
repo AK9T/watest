@@ -8,7 +8,7 @@
 @end
 
 %hook WAChatViewController
-UIImageView *dbzImg;
+void showGoku();
 
 - (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -33,24 +33,24 @@ UIImageView *dbzImg;
 }
 
 - (void)viewDidLoad {
-    showGoku();
+    showGoku()
 }
 
  void showGoku() {
     [UIView animateWithDuration: 0.8 animations:^{
        
-        dbzImg =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
+    dbzImg* UIImageView =[[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
         dbzImg.image = [UIImage imageNamed:@"goku.png"];
-        dbzImg.center = view.center;
+        dbzImg.center = self.view.center;
         dbzImg.contentMode = UIViewContentModeScaleAspectFit;
-        [view addSubview:dbzImg];
+        [self.view addSubview:dbzImg];
     } completion:^(BOOL finished) {
         if (finished ==  true) {
             NSLog(@"go fuck yourself");
 
 
                 [UIView animateWithDuration:0.6 animations:^{
-                dbzImg.alpha = 0.0;
+                dbz.alpha = 0.0;
                 }];
 
         }

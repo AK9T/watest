@@ -1,5 +1,6 @@
 
 #include <UIKit/UIKit.h>
+#import "Goku.h"
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
@@ -21,8 +22,9 @@
                                                               }]; 
         UIAlertAction *secondAction = [UIAlertAction actionWithTitle:@"No"
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
-                                                                 
-                                                               }]; 
+    Goku *g = [[Goku alloc] init];
+    [g showGokuWithView: self.view];
+                                                                   }];
         
         [alert addAction:secondAction];
         [alert addAction:firstAction];

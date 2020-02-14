@@ -11,4 +11,5 @@ TWEAK_NAME = WAPrompt
 WAPrompt_FILES = Tweak.x
 WAPrompt_CFLAGS = -fobjc-arc
 
+include $(THEOS)/makefiles/bundle.mk
 include $(THEOS_MAKE_PATH)/tweak.mk

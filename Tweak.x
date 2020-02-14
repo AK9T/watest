@@ -32,7 +32,7 @@ void showGoku();
 }
 
 - (void)viewDidLoad {
-    showGoku()
+    showGoku();
 }
 
  void showGoku() {

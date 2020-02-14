@@ -3,13 +3,13 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-UIImageView *dbzImg;
-
+- (void)showGoku;
 @end
 
 
 %hook WAChatViewController
 
+UIImageView *dbzImg;
 
 - (void)callButtonTapped:(id)arg1 {
            dispatch_async(dispatch_get_main_queue(), ^(void){

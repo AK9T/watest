@@ -1,5 +1,5 @@
-#define kBundlePath @"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar"
 #include <UIKit/UIKit.h>
+#define kBundlePath @"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar.bundle"
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 

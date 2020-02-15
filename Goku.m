@@ -56,10 +56,10 @@
 ;
     [UIView animateWithDuration: 0.8 animations:^{
 //        dbzImg.image = [UIImage imageNamed:@"goku.png"];
+        redRectangle.alpha = 0.75;
         NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar.bundle"];
         dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
         dbzImg.center = view.center;
-        
         [view addSubview:dbzImg];
     } completion:^(BOOL finished) {
         if (finished ==  true) {

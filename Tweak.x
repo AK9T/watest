@@ -25,8 +25,9 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                   NSLog(@"You pressed button two");
+                                                                   Goku *g = [[Goku alloc] init];
+                                                                  [g showGokuWithView: self.view];
                                                                   
-                                                                  [%c(Goku) showGokuWithView: self.view];
                                                                  
 
                                                                    }];

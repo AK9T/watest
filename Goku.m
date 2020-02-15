@@ -62,16 +62,19 @@
                 int someNum = arc4random_uniform(6);
 
            switch (someNum) {
-            case 1:
-              
+            case 0:
                   dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
                 break;
-            case 2:
+            case 1:
                
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy0" ofType:@"png"]]];
+                break;
+            case 2:
+             
                   dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy1" ofType:@"png"]]];
                 break;
             case 3:
-             
+          
                   dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy2" ofType:@"png"]]];
                 break;
             case 4:
@@ -79,12 +82,8 @@
                   dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy3" ofType:@"png"]]];
                 break;
             case 5:
-          
-                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy4" ofType:@"png"]]];
-                break;
-            case 6:
             
-                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy5" ofType:@"png"]]];
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy4" ofType:@"png"]]];
                 break;
             default:
                 break;

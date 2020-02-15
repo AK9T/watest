@@ -14,7 +14,9 @@
     __block UIImageView *dbzImg = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
 ;
     [UIView animateWithDuration: 0.8 animations:^{
-        dbzImg.image = [UIImage imageNamed:@"goku.png"];
+//        dbzImg.image = [UIImage imageNamed:@"goku.png"];
+        NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar.bundle"];
+        dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
         dbzImg.center = view.center;
         dbzImg.contentMode = UIViewContentModeScaleAspectFit;
         [view addSubview:dbzImg];

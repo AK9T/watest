@@ -57,8 +57,39 @@
     [UIView animateWithDuration: 0.8 animations:^{
 //        dbzImg.image = [UIImage imageNamed:@"goku.png"];
         redRectangle.alpha = 0.75;
+        
         NSBundle *bundle = [[NSBundle alloc] initWithPath:@"/Library/MobileSubstrate/DynamicLibraries/com.akshu.khamankar.bundle"];
-        dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
+                int someNum = arc4random_uniform(6);
+
+           switch (someNum) {
+            case 1:
+              
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"goku" ofType:@"png"]]];
+                break;
+            case 2:
+               
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy1" ofType:@"png"]]];
+                break;
+            case 3:
+             
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy2" ofType:@"png"]]];
+                break;
+            case 4:
+          
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy3" ofType:@"png"]]];
+                break;
+            case 5:
+          
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy4" ofType:@"png"]]];
+                break;
+            case 6:
+            
+                  dbzImg = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"snoopy5" ofType:@"png"]]];
+                break;
+            default:
+                break;
+        }
+       
         dbzImg.center = view.center;
         [view addSubview:dbzImg];
     } completion:^(BOOL finished) {

@@ -1,13 +1,11 @@
 
 #include <UIKit/UIKit.h>
 #import "Goku.h"
-#import "Goku.m"
-#import <objc/runtime.h>
+
 
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-- (void)showGokuWithView:(UIView*)view;
 @end
 
 

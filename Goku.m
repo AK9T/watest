@@ -11,7 +11,7 @@
 @implementation Goku
 
 - (void)showGokuWithView:(UIView*)view{
-    __block UIImageView *dbzImg = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,180,180)];
+    __block UIImageView *dbzImg = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,50,50)];
 ;
     [UIView animateWithDuration: 0.8 animations:^{
 //        dbzImg.image = [UIImage imageNamed:@"goku.png"];

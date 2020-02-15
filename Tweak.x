@@ -13,6 +13,10 @@
 
 
 - (void)callButtonTapped:(id)arg1 {
+   newFunc(self);
+}
+
+static void newFunc(WAChatViewController *object) {
  UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
     [redRectangle setBackgroundColor: [UIColor clearColor ]];
     
@@ -93,6 +97,5 @@
         [self presentViewController:alert animated:YES completion:nil];
     });    
 }
-
 
 %end

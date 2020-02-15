@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Goku;
+
+
+@end
+
 
 @interface Goku : NSObject
 

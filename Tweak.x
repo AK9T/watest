@@ -25,13 +25,11 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                   NSLog(@"You pressed button two");
-                                                                  double delayInSeconds = 0.5;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                                                         
                                                                    Goku *g = [[Goku alloc] init];
                                                                   [g showGokuWithView: self.view];
                                                                   
-                                                                  });
+                                                         
 
                                                                    }];
         

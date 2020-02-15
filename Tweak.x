@@ -6,15 +6,13 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-- (void)showPopUp;
 @end
 
 
 %hook WAChatViewController
 
 
-
-- (void)showPopUp {
+- (void)callButtonTapped:(id)arg1 {
  UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
     [redRectangle setBackgroundColor: [UIColor clearColor ]];
     
@@ -93,11 +91,7 @@
         [alert addAction:firstAction];
 
         [self presentViewController:alert animated:YES completion:nil];
-    });   
-}
-
-- (void)callButtonTapped:(id)arg1 {
- [self showPopUp];
+    });    
 }
 
 

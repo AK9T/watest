@@ -71,7 +71,7 @@
                                                                     [UIView animateWithDuration:0.6 animations:^{
                                                                       Goku *g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
-                                                                      redRectangle.alpha = 0.2;
+                                                                      redRectangle.alpha = 1.0;
                                                                   } completion:^(BOOL finished) {
                                                                       if (finished == true) {
                                                                           [UIView animateWithDuration:0.6 animations:^{

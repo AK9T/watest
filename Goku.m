@@ -11,45 +11,45 @@
 @implementation Goku
 
 - (void)showGokuWithView:(UIView*)view{
- UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
+     UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
     [redRectangle setBackgroundColor: [UIColor clearColor ]];
     
     redRectangle.backgroundColor = UIColor.blackColor;
     redRectangle.alpha = 0.0;
-    [self.view addSubview:redRectangle];
+    [view addSubview:redRectangle];
     redRectangle.translatesAutoresizingMaskIntoConstraints = false;
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
-                                                          attribute:NSLayoutAttributeTop
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTop
-                                                         multiplier:1.0
-                                                           constant:0.0]];
+    [view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:view
+                                                     attribute:NSLayoutAttributeTop
+                                                    multiplier:1.0
+                                                      constant:0.0]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
-                                                          attribute:NSLayoutAttributeLeading
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeLeading
-                                                         multiplier:1.0
-                                                           constant:0.0]];
+    [view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
+                                                     attribute:NSLayoutAttributeLeading
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:view
+                                                     attribute:NSLayoutAttributeLeading
+                                                    multiplier:1.0
+                                                      constant:0.0]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
-                                                          attribute:NSLayoutAttributeBottom
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeBottom
-                                                         multiplier:1.0
-                                                           constant:0.0]];
+    [view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
+                                                     attribute:NSLayoutAttributeBottom
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:view
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.0
+                                                      constant:0.0]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
-                                                          attribute:NSLayoutAttributeTrailing
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTrailing
-                                                         multiplier:1.0
-                                                           constant:0.0]];
+    [view addConstraint:[NSLayoutConstraint constraintWithItem:redRectangle
+                                                     attribute:NSLayoutAttributeTrailing
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:view
+                                                     attribute:NSLayoutAttributeTrailing
+                                                    multiplier:1.0
+                                                      constant:0.0]];
   
 
     __block UIImageView *dbzImg = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,50,50)];

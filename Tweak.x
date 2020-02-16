@@ -55,6 +55,7 @@
     [letterTapRecognizer setNumberOfTapsRequired:3];
     [self.view addGestureRecognizer:letterTapRecognizer];
     customSwitch.hidden = true;
+    %orig;
 }
 
 

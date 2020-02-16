@@ -31,7 +31,7 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                   NSLog(@"You pressed button two");
-                                                                   [self setCallButtonHidden:true];
+                                                                  
                                                                      Goku *g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
 

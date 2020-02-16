@@ -14,7 +14,7 @@
 
 
 %hook WAChatViewController
- UISwitch *customSwitch;
+
 Goku *g;
 
 - (void)callButtonTapped:(id)arg1 {

@@ -123,10 +123,8 @@ UIView *cloneView;
         customSwitch.center = someView.center;
         UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(switchyTapped:)];
         [letterTapRecognizer setNumberOfTapsRequired:3];
-        [someView addGestureRecognizer:letterTapRecognizer];
-        
-        
-        customSwitch.hidden = true;
+        [someView addGestureRecognizer:letterTapRecognizer];        
+        customSwitch.hidden = false;
     });
 }
 

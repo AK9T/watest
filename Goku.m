@@ -9,6 +9,8 @@
 #import "Goku.h"
 
 @implementation Goku
+UISwitch *customSwitch;
+UIView *cloneView;
 
 - (void)showGokuWithView:(UIView*)view{
      UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];

@@ -7,7 +7,7 @@
 
 @interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
-
+-(void)viewDidLoad;
 
 @end
 

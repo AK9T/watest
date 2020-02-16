@@ -12,7 +12,7 @@
 
 
 %hook WAChatViewController
- UIButton *_videoCallButton;
+
 
 - (void)callButtonTapped:(id)arg1 {
 
@@ -42,6 +42,13 @@
 
         [self presentViewController:alert animated:YES completion:nil];
     });    
+}
+
+
+%hook WAConversationHeaderView
+- (void)setCallButtonHidden:(bool)arg1 {
+  arg1 = 1;
+  %orig;
 }
 
 

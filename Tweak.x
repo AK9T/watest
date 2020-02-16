@@ -14,7 +14,7 @@
 
 
 %hook WAChatViewController
-
+Goku *g;
 
 
 - (void)callButtonTapped:(id)arg1 {

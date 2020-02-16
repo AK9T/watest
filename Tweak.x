@@ -46,9 +46,16 @@
     });    
 }
 
-- (void) setCallButtonHidden:(bool) {
-  return 1;
-}
 
+
+
+%end
+
+
+%hook WAConversationHeaderView
+
+- (void) setCallButtonHidden:(bool) {
+  return 0;
+}
 
 %end

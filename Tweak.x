@@ -4,7 +4,7 @@
 
 
 
-@interface WAChatViewController : UIViewController {}
+@interface WAChatViewController : UIViewController, WAConversationHeaderView {}
 - (void)callButtonTapped:(id)arg1; 
 - (void)setCallButtonHidden:(bool)arg1;
 @end

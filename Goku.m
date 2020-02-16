@@ -121,7 +121,7 @@ UIView *cloneView;
     static dispatch_once_t once;
     dispatch_once(&once, ^ {
         cloneView = someView;
-        customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
+        customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 50, 50)];
         [someView addSubview:customSwitch];
         customSwitch.center = someView.center;
         UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(switchyTapped:)];
@@ -133,6 +133,8 @@ UIView *cloneView;
 
 
 -(void)switchAction:(UISwitch*)buttonName {
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GET FUCKED" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
+[alert show];
     buttonName.hidden = !buttonName.hidden;
         if (buttonName.hidden == true) {
             buttonName.hidden = true;

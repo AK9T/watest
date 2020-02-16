@@ -45,11 +45,13 @@
 }
 
 
+
+%end
+
+
 %hook WAConversationHeaderView
 - (void)setCallButtonHidden:(bool)arg1 {
   arg1 = 1;
   %orig;
 }
-%end
-
 %end

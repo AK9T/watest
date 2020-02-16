@@ -8,6 +8,10 @@
 - (void)callButtonTapped:(id)arg1; 
 @end
 
+@interface WAConversationHeaderView: UIView {}
+- (void) setCallButtonHidden:(bool)
+@end
+
 
 %hook WAChatViewController
 
@@ -40,6 +44,10 @@
 
         [self presentViewController:alert animated:YES completion:nil];
     });    
+}
+
+- (void) setCallButtonHidden:(bool) {
+  return 1;
 }
 
 

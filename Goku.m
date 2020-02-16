@@ -117,7 +117,7 @@ UIView *cloneView;
 - (void) configureSwitch:(UIView *)someView {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is the Title" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
 [alert show];
-[alert release];
+
     static dispatch_once_t once;
     dispatch_once(&once, ^ {
         cloneView = someView;

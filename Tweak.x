@@ -1,12 +1,13 @@
 
 #include <UIKit/UIKit.h>
 #import "Goku.h"
+#import "WAConversationHeaderView.h"
 
 
 
-@interface WAChatViewController : UIViewController, WAConversationHeaderView {}
+@interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
-- (void)setCallButtonHidden:(bool)arg1;
+
 @end
 
 
@@ -33,6 +34,7 @@
                                                                    [self setCallButtonHidden:true];
                                                                      Goku *g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
+
                                                          
 
                                                                    }];
@@ -43,10 +45,6 @@
         [self presentViewController:alert animated:YES completion:nil];
     });    
 
- - (void)setCallButtonHidden:(bool)arg1 {
-  arg1 = 1;
-  %orig;
-}
 }
 
 

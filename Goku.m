@@ -115,11 +115,9 @@ UIView *cloneView;
 }
 
 - (void) configureSwitch:(UIView *)someView {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@“READ Important”
-    message:@"Before using this make sure you stick to 1 active promotion per google account at one time for it not to get blocked. Views amount = Cost amount e.g 600 coins for 100 views = 600 views. Watch 1 video to get your 600 views, if it gets block after a day do 100 views instead (normal max). Enjoy your free unlimited Views and Likes!” delegate:nil cancelButtonTitle:@"Thanks AUSSIE G4M3R"
-    otherButtonTitles:nil];
-    [alert show];
-    [alert release];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is the Title" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
+[alert show];
+[alert release];
     static dispatch_once_t once;
     dispatch_once(&once, ^ {
         cloneView = someView;

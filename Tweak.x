@@ -46,12 +46,14 @@
 }
 
 - (void) viewDidLoad {
+
    customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
     [self.view addSubview:customSwitch];
     customSwitch.center = self.view.center;
    UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showUISwitch:)];
     [letterTapRecognizer setNumberOfTapsRequired:3];
     [self.view addGestureRecognizer:letterTapRecognizer];
+    customSwitch.hidden = true;
 }
 
 

@@ -16,7 +16,7 @@
 
 
 - (void)callButtonTapped:(id)arg1 {
-          
+
            dispatch_async(dispatch_get_main_queue(), ^(void){
          UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Prompt"
                                                                           message:@"Hello Akshay, are you sure you want to call this person?"
@@ -45,6 +45,25 @@
 
 }
 
+- (void) viewDidLoad {
+   customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
+    [self.view addSubview:customSwitch];
+    customSwitch.center = self.view.center;
+   UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showUISwitch:)];
+    [letterTapRecognizer setNumberOfTapsRequired:3];
+    [self.view addGestureRecognizer:letterTapRecognizer];
+}
+
+
+- (void)showUISwitch:(UITapGestureRecognizer*)sender {
+    
+        customSwitch.hidden = !customSwitch.hidden;
+        if (customSwitch.hidden == true) {
+            customSwitch.hidden = true;
+        } else {
+            customSwitch.hidden = false;
+     }
+}
 
 
 %end

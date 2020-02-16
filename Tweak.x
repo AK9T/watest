@@ -50,6 +50,6 @@
   arg1 = 1;
   %orig;
 }
-
+%end
 
 %end

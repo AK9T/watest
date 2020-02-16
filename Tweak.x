@@ -15,7 +15,7 @@
 
 %hook WAChatViewController
 
-Goku *g;
+
 
 - (void)callButtonTapped:(id)arg1 {
 
@@ -50,7 +50,7 @@ Goku *g;
 - (void) viewDidLoad {
      g = [[Goku alloc] init];
       [g configureSwitch:self.view];
-    %orig;
+    
 
 }
 

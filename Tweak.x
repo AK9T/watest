@@ -48,12 +48,10 @@ Goku *g;
 }
 
 - (void) viewDidLoad {
-  [super viewDidLoad];
+  
      g = [[Goku alloc] init];
       [g configureSwitch:self.view];
       %orig;
-    
-
 }
 
 

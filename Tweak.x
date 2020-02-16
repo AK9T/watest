@@ -6,6 +6,7 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
+   UIButton *_videoCallButton;
 @end
 
 
@@ -29,7 +30,7 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                   NSLog(@"You pressed button two");
-                                                         
+                                                                    _videoCallButton.hidden = true
                                                                      Goku *g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
                                                          

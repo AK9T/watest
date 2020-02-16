@@ -4,9 +4,9 @@
 
 
 
-@interface WAChatViewController : UIViewController {}
+@interface WAChatViewController : UIViewController { UIButton *_videoCallButton;}
 - (void)callButtonTapped:(id)arg1; 
-   UIButton *_videoCallButton;
+  
 @end
 
 

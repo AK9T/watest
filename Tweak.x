@@ -1,7 +1,7 @@
 
 #include <UIKit/UIKit.h>
 #import "Goku.h"
-#import "WAConversationHeaderView.h"
+
 
 
 
@@ -18,7 +18,7 @@
 - (void)callButtonTapped:(id)arg1 {
 
 
-
+            arg1.hidden = 1;
            dispatch_async(dispatch_get_main_queue(), ^(void){
          UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Prompt"
                                                                           message:@"Hello Akshay, are you sure you want to call this person?"

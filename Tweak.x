@@ -9,7 +9,7 @@
 @end
 
 @interface WAConversationHeaderView: UIView {}
-- (void) setCallButtonHidden:(bool)
+- (void) setCallButtonHidden:(bool);
 @end
 
 

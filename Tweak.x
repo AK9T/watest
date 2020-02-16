@@ -7,7 +7,7 @@
 
 @interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
--(void)viewDidLoad;
+- (void)viewDidLoad;
 
 @end
 
@@ -47,8 +47,8 @@ Goku *g;
 
 }
 
-- (void) viewDidLoad {
-  
+- (void)viewDidLoad {
+
      g = [[Goku alloc] init];
       [g configureSwitch:self.view];
       %orig;

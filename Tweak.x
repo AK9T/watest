@@ -13,7 +13,7 @@
 
 
 %hook WAChatViewController
-
+ UISwitch *customSwitch;
 
 - (void)callButtonTapped:(id)arg1 {
 

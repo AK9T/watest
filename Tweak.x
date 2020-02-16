@@ -8,12 +8,14 @@
 @interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
 
+
 @end
 
 
 
 %hook WAChatViewController
  UISwitch *customSwitch;
+Goku *g;
 
 - (void)callButtonTapped:(id)arg1 {
 
@@ -30,7 +32,7 @@
                                                                
                                                                   NSLog(@"You pressed button two");
                                                                   
-                                                                     Goku *g = [[Goku alloc] init];
+                                                                     g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
 
                                                          
@@ -54,19 +56,16 @@
    UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showUISwitch:)];
     [letterTapRecognizer setNumberOfTapsRequired:3];
     [self.view addGestureRecognizer:letterTapRecognizer];
-    %orig;
-}
 
-
-- (void)showUISwitch:(UITapGestureRecognizer*)sender {
     
-        customSwitch.hidden = !customSwitch.hidden;
-        if (customSwitch.hidden == true) {
-            customSwitch.hidden = true;
-        } else {
-            customSwitch.hidden = false;
-     }
+
+    %orig;
+
+
 }
+
+
+
 
 
 %end

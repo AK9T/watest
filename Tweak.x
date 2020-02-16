@@ -6,7 +6,7 @@
 
 @interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
-  
+- (void)setCallButtonHidden:(bool)arg1;
 @end
 
 
@@ -30,7 +30,7 @@
                                                                style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
                                                                
                                                                   NSLog(@"You pressed button two");
-
+                                                                   [self setCallButtonHidden:true];
                                                                      Goku *g = [[Goku alloc] init];
                                                                       [g showGokuWithView: self.view];
                                                          
@@ -42,16 +42,15 @@
 
         [self presentViewController:alert animated:YES completion:nil];
     });    
-}
 
-
-
-%end
-
-
-%hook WAConversationHeaderView
-- (void)setCallButtonHidden:(bool)arg1 {
+ - (void)setCallButtonHidden:(bool)arg1 {
   arg1 = 1;
   %orig;
 }
+}
+
+
+
 %end
+
+

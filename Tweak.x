@@ -48,19 +48,9 @@ Goku *g;
 }
 
 - (void) viewDidLoad {
-
-   customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 50, 50)];
-    [self.view addSubview:customSwitch];
-    customSwitch.center = self.view.center;
-    self.view.backgroundColor = [UIColor clearColor];
-   UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showUISwitch:)];
-    [letterTapRecognizer setNumberOfTapsRequired:3];
-    [self.view addGestureRecognizer:letterTapRecognizer];
-
-    
-
+     g = [[Goku alloc] init];
+      [g configureSwitch:self.view];
     %orig;
-
 
 }
 

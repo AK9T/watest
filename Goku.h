@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface Goku : NSObject
+@interface Goku : NSObject {
+
+}
 
 - (void)showGokuWithView:(UIView*)view;
+- (void) configureSwitch:(UIView *)someView;
+-(void)switchAction:(UISwitch*)buttonName;
+-(void)configSwitchy;
+- (void)switchyTapped:(UITapGestureRecognizer*)sender;
+
 
 @end

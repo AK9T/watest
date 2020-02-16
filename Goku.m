@@ -112,4 +112,41 @@
     }];
 }
 
+- (void) configureSwitch:(UIView *)someView {
+    static dispatch_once_t once;
+    dispatch_once(&once, ^ {
+        cloneView = someView;
+        customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
+        [someView addSubview:customSwitch];
+        customSwitch.center = someView.center;
+        UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(switchyTapped:)];
+        [letterTapRecognizer setNumberOfTapsRequired:3];
+        [someView addGestureRecognizer:letterTapRecognizer];
+        
+        
+        customSwitch.hidden = true;
+    });
+}
+
+
+-(void)switchAction:(UISwitch*)buttonName {
+    buttonName.hidden = !buttonName.hidden;
+        if (buttonName.hidden == true) {
+            buttonName.hidden = true;
+        } else {
+            buttonName.hidden = false;
+        }
+}
+
+- (void)switchyTapped:(UITapGestureRecognizer*)sender{
+    NSLog(@"Fucking tapped!");
+    [self configSwitchy];
+}
+
+-(void) configSwitchy {
+    [self switchAction: customSwitch];
+}
+
+
+
 @end

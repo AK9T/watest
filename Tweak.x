@@ -4,7 +4,7 @@
 
 
 
-@interface WAChatViewController : UIViewController { UIButton *_videoCallButton;}
+@interface WAChatViewController : UIViewController {}
 - (void)callButtonTapped:(id)arg1; 
   
 @end
@@ -12,7 +12,7 @@
 
 
 %hook WAChatViewController
-
+ UIButton *_videoCallButton;
 
 - (void)callButtonTapped:(id)arg1 {
 

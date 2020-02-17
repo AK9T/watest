@@ -1,7 +1,7 @@
 
 #include <UIKit/UIKit.h>
 #import "Goku.h"
-#define PLIST_PATH @"/var/mobile/Library/Preferences/Info.plist"  
+#define PLIST_PATH @"/var/mobile/Library/Preferences/Root.plist"  
 
 inline bool GetPrefBool(NSString *key)
 {
@@ -68,7 +68,6 @@ Goku *g;
       arg1 = 1;                     
 }
    return %orig;
-
 }
 
 %end

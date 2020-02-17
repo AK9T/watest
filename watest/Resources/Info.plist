@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>watest</string>
 	<key>CFBundleIdentifier</key>
-	<string>Info</string>
+	<string>com.akshu.watest</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

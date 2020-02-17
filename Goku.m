@@ -133,8 +133,7 @@ UIView *cloneView;
 
 
 -(void)switchAction:(UISwitch*)buttonName {
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GET FUCKED" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
-[alert show];
+    
     buttonName.hidden = !buttonName.hidden;
         if (buttonName.hidden == true) {
             buttonName.hidden = true;
@@ -144,6 +143,8 @@ UIView *cloneView;
 }
 
 - (void)switchyTapped:(UITapGestureRecognizer*)sender{
+      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GET FUCKED" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
+[alert show];
     NSLog(@"Fucking tapped!");
     [self configSwitchy];
 }

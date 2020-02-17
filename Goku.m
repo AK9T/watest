@@ -11,6 +11,7 @@
 @implementation Goku {}
 UISwitch *customSwitch;
 UIView *cloneView;
+bool isAdded = false;
 
 - (void)showGokuWithView:(UIView*)view{
      UIView *redRectangle = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
@@ -118,17 +119,19 @@ UIView *cloneView;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is the Title" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
 [alert show];
 
-    static dispatch_once_t once;
-    dispatch_once(&once, ^ {
+  if(isAdded == false) {
+        isAdded = true;
         cloneView = someView;
-        customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 50, 50)];
+        customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
         [someView addSubview:customSwitch];
         customSwitch.center = someView.center;
         UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(switchyTapped:)];
         [letterTapRecognizer setNumberOfTapsRequired:3];
-        [someView addGestureRecognizer:letterTapRecognizer];        
+        [someView addGestureRecognizer:letterTapRecognizer];
         customSwitch.hidden = false;
-    });
+    } else {
+        NSLog(@"do nothing");
+    }
 }
 
 

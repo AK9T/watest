@@ -8,7 +8,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = WAPrompt
 
-WAPrompt_FILES = Tweak.xm Goku.m
+WAPrompt_FILES = Tweak.x Goku.m
 WAPrompt_CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/bundle.mk

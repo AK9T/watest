@@ -1,0 +1,10 @@
+Package: com.akshu.khamankar
+Name: WAPrompt
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Akshay Khamankar
+Author: Akshay Khamankar
+Section: Tweaks
+Version: 0.0.1-78+debug
+Installed-Size: 712

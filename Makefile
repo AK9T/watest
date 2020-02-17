@@ -13,3 +13,5 @@ WAPrompt_CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/bundle.mk
 include $(THEOS_MAKE_PATH)/tweak.mk
+SUBPROJECTS += watest
+include $(THEOS_MAKE_PATH)/aggregate.mk

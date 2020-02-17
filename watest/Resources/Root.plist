@@ -24,9 +24,9 @@
 			<key>default</key>
 			<false/>
 			<key>defaults</key>
-			<string>Info</string>               
+			<string>com.akshu.watest</string>               
 			<key>key</key>
-			<string>kCoin</string>                
+			<string>enabled</string>                
 			<key>label</key>
 			<string>Infinite Coins</string>       
 		</dict>

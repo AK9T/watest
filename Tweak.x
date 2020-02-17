@@ -1,9 +1,12 @@
 
 #include <UIKit/UIKit.h>
 #import "Goku.h"
+#define PLIST_PATH @"/var/mobile/Library/Preferences/Info.plist"  
 
-
-
+inline bool GetPrefBool(NSString *key)
+{
+return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];
+}
 
 @interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
@@ -55,9 +58,16 @@ Goku *g;
 }
 
 
-
-
-
 %end
 
+
+%hook WAConversationHeaderView
+
+-(void)setCallButtonHidden:(bool)arg1 {
+   if(GetPrefBool(@"kCoin")) {          
+      arg1 = 1;                     
+}
+   return %orig;
+
+}
 

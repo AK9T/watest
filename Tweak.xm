@@ -1,5 +1,5 @@
 
-#define PLIST_PATH @"/var/mobile/Library/Preferences/Root.plist"
+#define PLIST_PATH @"/var/mobile/Library/Preferences/com.lol.prefbundle.plist"
 inline bool GetPrefBool(NSString *key)
 {
 return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];

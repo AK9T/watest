@@ -120,7 +120,6 @@ bool isAdded = false;
 [alert show];
 
   if(isAdded == false) {
-        isAdded = true;
         cloneView = someView;
         customSwitch = [[UISwitch alloc] initWithFrame: CGRectMake(0, 0, 200, 200)];
         [someView addSubview:customSwitch];

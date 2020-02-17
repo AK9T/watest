@@ -1,5 +1,5 @@
 
-#define PLIST_PATH @"/var/mobile/Library/Preferences/Root.plist"
+#define PLIST_PATH @"/var/mobile/Library/Preferences/com.akshu.watest.plist"
 inline bool GetPrefBool(NSString *key)
 {
 return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];
@@ -7,16 +7,11 @@ return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key]
 #include <UIKit/UIKit.h>
 #import "Goku.h"
 
-
-
-
 @interface WAChatViewController : UIViewController{}
 - (void)callButtonTapped:(id)arg1; 
 - (void)viewDidLoad;
 
 @end
-
-
 
 %hook WAChatViewController
 Goku *g;

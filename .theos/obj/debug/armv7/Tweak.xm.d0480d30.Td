@@ -1,5 +1,5 @@
-/var/root/waprompt/.theos/obj/debug/arm64/Tweak.x.28dc1363.o: \
-  /var/root/waprompt/.theos/obj/debug/arm64/Tweak.x.m \
+/var/root/waprompt/.theos/obj/debug/armv7/Tweak.xm.d0480d30.o: \
+  /var/root/waprompt/.theos/obj/debug/armv7/Tweak.xm.mm \
   /var/theos/Prefix.pch \
   /var/theos/vendor/include/_Prefix/BackwardsCompat.h \
   /var/theos/vendor/include/_Prefix/IOSMacros.h \

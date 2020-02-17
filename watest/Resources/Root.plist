@@ -24,7 +24,7 @@
 			<key>default</key>
 			<false/>
 			<key>defaults</key>
-			<string>watest</string>               
+			<string>com.akshu.watest</string>               
 			<key>key</key>
 			<string>kCoin</string>                
 			<key>label</key>

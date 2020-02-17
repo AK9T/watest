@@ -116,8 +116,7 @@ bool isAdded = false;
 }
 
 - (void) configureSwitch:(UIView *)someView {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"This is the Title" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
-[alert show];
+
 
   if(isAdded == false) {
         cloneView = someView;
@@ -145,8 +144,6 @@ bool isAdded = false;
 }
 
 - (void)switchyTapped:(UITapGestureRecognizer*)sender{
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"GET FUCKED" message:@"This is the Message" delegate:nil cancelButtonTitle:@"This is the Button Text" otherButtonTitles:nil];
-[alert show];
     NSLog(@"Fucking tapped!");
     [self configSwitchy];
 }

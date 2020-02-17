@@ -1,8 +1,12 @@
 
+#define PLIST_PATH @"/var/mobile/Library/Preferences/Root.plist
 #include <UIKit/UIKit.h>
 #import "Goku.h"
-#define kPath @"/var/mobile/Library/Preferences/Root.plist"
 
+inline bool GetPrefBool(NSString *key)
+{
+return [[[NSDictionary dictionaryWithContentsOfFile:PLIST_PATH] valueForKey:key] boolValue];
+}
 
 
 @interface WAChatViewController : UIViewController{}
@@ -61,12 +65,9 @@ Goku *g;
 %hook WAConversationHeaderView
 
 -(void)setCallButtonHidden:(bool)arg1 {
-NSDictionary *prefs=[[NSDictionary alloc] initWithContentsOfFile:kPath];
-%orig;
-if ([[prefs objectForKey:@"kCoin"] boolValue]) {                    //instead "Coin" put what u want, but there must be "k"
-arg1 = 1; ;                                                     //here what you want return your function         
+if(GetPrefBool(@"kCoin")) {            
+   arg1 = 1;                       
 }
-[prefs release];
 return %orig;
 }
 

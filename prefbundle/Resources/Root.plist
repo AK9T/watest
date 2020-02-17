@@ -16,7 +16,7 @@
 			<key>default</key>
 			<true/>
 			<key>defaults</key>
-			<string>com.lol.prefbundle</string>
+			<string>prefbundle</string>
 			<key>key</key>
 			<string>kCoin</string>
 			<key>label</key>

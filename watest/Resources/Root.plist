@@ -26,7 +26,7 @@
 			<key>defaults</key>
 			<string>com.akshu.watest</string>               
 			<key>key</key>
-			<string>enabled</string>                
+			<string>kCoin</string>                
 			<key>label</key>
 			<string>Infinite Coins</string>       
 		</dict>
